@@ -1,6 +1,6 @@
-# makelifeeasy
-Windows One Line Commands to make life easy
+#RooT HaXor
 Bang!! Bang!!
+
 <h2><a id="user-content-table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table of Contents</h2>
 
 <ul>
@@ -84,7 +84,6 @@ Bang!! Bang!!
 <li><a href="#convert-between-vdi-vmdk-vhd-raw-disk-images-using-virtualbox">Convert Between VDI, VMDK, VHD, RAW disk images using VirtualBox</a></li>
 <li><a href="#change-file-extensions-recurseively">Change file extensions recurseively</a></li>
 <li><a href="#list-ips-of-running-virtualbox-machines">List IPs of running VirtualBox machines</a></li>
-<li><a href="#windows-privilege-escalation">Windows Privilege Escalation</a></li>
 <li><a href="#enumerate-packages-with-their-oem-inf-filenames">Enumerate packages with their oem inf filenames</a></li>
 <li><a href="#install-a-driver-package-using-inf-file">Install a driver package using inf file</a></li>
 <li><a href="#malware-hunting-with-mark-russinovich-and-the-sysinternals">Malware Hunting with Mark Russinovich and the Sysinternals</a></li>
@@ -613,7 +612,7 @@ PS C:\&gt; gwmi -n root\cimv2 -li
 
 <h3><a id="user-content-windows-privilege-escalation" class="anchor" href="#windows-privilege-escalation" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Windows Privilege Escalation</h3>
 
-<p><a href="http://www.slideshare.net/riyazwalikar/windows-privilege-escalation"><img src="/madhuakula/wincmdfu/raw/master/images/windows-privilege-esclation.png" alt="Windows Privilege Escalation" style="max-width:100%;"></a></p>
+<p><a href="http://www.slideshare.net/riyazwalikar/windows-privilege-escalation"><img src="https://1.bp.blogspot.com/-sxrnJZlu86Q/V1FYEzY7T_I/AAAAAAAAoTI/Oz4pCQ8kWv0YWFeHE2Fk0ppZ3fQrnHUuwCLcB/s1600/windows-zero-day-exploit.png" alt="Windows Privilege Escalation" style="max-width:100%;"></a></p>
 
 <h3><a id="user-content-enumerate-packages-with-their-oem-inf-filenames" class="anchor" href="#enumerate-packages-with-their-oem-inf-filenames" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enumerate packages with their oem inf filenames</h3>
 
