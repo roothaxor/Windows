@@ -742,3 +742,4 @@ C:\&gt; wmic nicconfig where index=1 call SetTcpipNetbios 1
 1-En
 2-Dis
 </code></pre>
+<h1> Thankyu For reading Now get your fucking ass read and remind this dont just scroll and say its nice learn this fucker</h1>
