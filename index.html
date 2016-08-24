@@ -21,7 +21,12 @@
 <a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="user-content-table-of-contents" href="#table-of-contents"></a>Table of Contents</h2>
 
 <ul>
-  
+<li><a href="#List-Remote-Usersname-Connected">List the machines, with usernames, that were connected via RDP</a></li>
+<li><a href="#List-RDP-Remote-Proccess-On-System">List all process that are running on your system by remote users connected via RDP</a></li>
+<li><a href="#Reset-the-Windows-stack">Reset the Windows TCP\IP stack</a></li>
+<li><a href="#List-Logged-Users-Pentest">List logged on users. Very useful during a pentest to look for domain admins</a></li>
+<li><a href="#bypass-powershell-shit">Bypass powershell execution policy restrictions</a></li>
+<li><a href="#ping-multiple-ip">Ping multiple IPs from ips.txt & see live hosts</a></li>
 <li><a href="#Get-list-open-pipes-Powershell">Get a list of all open Named pipes via Powershell</a></li>
 <li><a href="#List-RDP-Sessions-On-Local-Format">List RDP sessions on local (or remote) in list format</a></li>
 <li><a href="#Unzip-PowerShell">Unzip using PowerShell</a></li>
@@ -131,6 +136,39 @@
 </ul>
 
 <hr>
+<h3>
+<a id="List-Remote-Usersname-Connected" class="anchor" href="#List-Remote-Usersname-Connected" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-Remote-Usersname-Connected" href="#List-Remote-Usersname-Connected"></a>List the machines, with usernames, that were connected via RDP</h3>
+
+<pre><code>C:\&gt;reg query "HKCU\Software\Microsoft\Terminal Server Client\Servers" /s
+</code></pre>
+<h3>
+<a id="List-RDP-Remote-Proccess-On-System" class="anchor" href="#List-RDP-Remote-Proccess-On-System" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-RDP-Remote-Proccess-On-System" href="#List-RDP-Remote-Proccess-On-System"></a>List all process that are running on your system by remote users connected via RDP</h3>
+
+<pre><code>C:\&gt;query process *
+</code></pre>
+<h3>
+<a id="Reset-the-Windows-stack" class="anchor" href="#Reset-the-Windows-stack" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Reset-the-Windows-stack" href="#Reset-the-Windows-stack"></a>Reset the Windows TCP\IP stack</h3>
+
+<pre><code>C:\&gt;netsh int ip reset c:\tcpresetlog.txt
+</code></pre>
+
+<h3>
+<a id="List-Logged-Users-Pentest" class="anchor" href="#List-Logged-Users-Pentest" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-Logged-Users-Pentest" href="#List-Logged-Users-Pentest"></a>List logged on users. Very useful during a pentest to look for domain admins</h3>
+
+<pre><code>PS C:\&gt;net session | find "\\"
+</code></pre>
+
+<h3>
+<a id="bypass-powershell-shit" class="anchor" href="#bypass-powershell-shit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="bypass-powershell-shit" href="#bypass-powershell-shit"></a>Bypass powershell execution policy restrictions</h3>
+
+<pre><code>PS C:\&gt;powershell -ExecutionPolicy Bypass -Noninteractive -File .\lastboot.ps1
+</code></pre>
+
+<h3>
+<a id="ping-multiple-ip" class="anchor" href="#ping-multiple-ip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="ping-multiple-ip" href="#ping-multiple-ip"></a>Ping multiple IPs from ips.txt & see live hosts</h3>
+
+<pre><code>C:\&gt;for /F %i in (ips.txt) do ping -n 1 %i | find "bytes="
+</code></pre>
 
 <h3>
 <a id="Get-list-open-pipes-Powershell" class="anchor" href="#Get-list-open-pipes-Powershell" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Get-list-open-pipes-Powershell" href="#Get-list-open-pipes-Powershell"></a>Get a list of all open Named pipes via Powershell</h3>
