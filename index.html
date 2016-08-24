@@ -21,6 +21,11 @@
 <a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="user-content-table-of-contents" href="#table-of-contents"></a>Table of Contents</h2>
 
 <ul>
+  
+<li><a href="#Get-list-open-pipes-Powershell">Get a list of all open Named pipes via Powershell</a></li>
+<li><a href="#List-RDP-Sessions-On-Local-Format">List RDP sessions on local (or remote) in list format</a></li>
+<li><a href="#Unzip-PowerShell">Unzip using PowerShell</a></li>
+<li><a href="#Find-Large-Files-CmD">To quickly find large files using cmd</a></li>
 <li><a href="#Print-RDP-Connects">Print RDP connects</a></li>
 <li><a href="#List-scheduled-tasks-binaries">List scheduled tasks & binaries</a></li>
 <li><a href="#Display-the-stored-username">Display the "Stored User names and Passwords" windows</a></li>
@@ -126,6 +131,28 @@
 </ul>
 
 <hr>
+
+<h3>
+<a id="Get-list-open-pipes-Powershell" class="anchor" href="#Get-list-open-pipes-Powershell" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Get-list-open-pipes-Powershell" href="#Get-list-open-pipes-Powershell"></a>Get a list of all open Named pipes via Powershell</h3>
+
+<pre><code>PS C:\&gt;[http://System.IO.Directory ]::GetFiles("\\.\\pipe\\")
+</code></pre>
+<h3>
+<a id="List-RDP-Sessions-On-Local-Format" class="anchor" href="#List-RDP-Sessions-On-Local-Format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-RDP-Sessions-On-Local-Format" href="#List-RDP-Sessions-On-Local-Format"></a>List RDP sessions on local (or remote) in list format</h3>
+
+<pre><code>PS C:\&gt;qwinsta /server: | foreach {($_.trim() -replace "\s+",",")} | ConvertFrom-Csv
+</code></pre>
+
+<h3>
+<a id="Unzip-PowerShell" class="anchor" href="#Unzip-PowerShell" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Unzip-PowerShell" href="#Unzip-PowerShell"></a>Unzip using PowerShell</h3>
+
+<pre><code>C:\&gt;Add-Type -A System.IO.Compression.FileSystem;[IO.Compression.ZipFile]::ExtractToDirectory(src,dst)
+</code></pre>
+<h3>
+<a id="Find-Large-Files-CmD" class="anchor" href="#Find-Large-Files-CmD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Find-Large-Files-CmD" href="#Find-Large-Files-CmD"></a>To quickly find large files using cmd</h3>
+
+<pre><code>C:\&gt;forfiles /s /c "cmd /c if @fsize gtr 100000 echo @path @fsize bytes"
+</code></pre>
 <h3>
 <a id="Print-RDP-Connects" class="anchor" href="#Print-RDP-Connects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Print-RDP-Connects" href="#Print-RDP-Connects"></a>Print RDP connects</h3>
 
