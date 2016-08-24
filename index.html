@@ -21,6 +21,9 @@
 <a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="user-content-table-of-contents" href="#table-of-contents"></a>Table of Contents</h2>
 
 <ul>
+<li><a href="#Add-Binary-Other-Data-Stream">Add a binary to an Alternate Data Stream</a></li>
+<li><a href="#Binary-Execute-using-WMIC">Execute a binary Alternate Data Stream (Win 7/ 2008) using wmic</a></li>
+<li><a href="#Remote-FTP-STart">Remotely stop/start ftp on several systems</a></li>
 <li><a href="#List-Remote-Usersname-Connected">List the machines, with usernames, that were connected via RDP</a></li>
 <li><a href="#List-RDP-Remote-Proccess-On-System">List all process that are running on your system by remote users connected via RDP</a></li>
 <li><a href="#Reset-the-Windows-stack">Reset the Windows TCP\IP stack</a></li>
@@ -136,6 +139,22 @@
 </ul>
 
 <hr>
+<h3>
+<a id="Add-Binary-Other-Data-Stream" class="anchor" href="#Add-Binary-Other-Data-Stream" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Add-Binary-Other-Data-Stream" href="#Add-Binary-Other-Data-Stream"></a>Add a binary to an Alternate Data Stream</h3>
+
+<pre><code>C:\&gt;type c:\tools\nc.exe > c:\nice.png:nc.exe<br>Execute it (XP/2K3):
+C:\> start c:\nice.png:nc.exe
+</code></pre>
+<h3>
+<a id="Binary-Execute-using-WMIC" class="anchor" href="#Binary-Execute-using-WMIC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Binary-Execute-using-WMIC" href="#Binary-Execute-using-WMIC"></a>Execute a binary Alternate Data Stream (Win 7/ 2008) using wmic</h3>
+
+<pre><code>C:\&gt;wmic process call create C:\nice.png:nc.exe
+</code></pre>
+<h3>
+<a id="Remote-FTP-STart" class="anchor" href="#Remote-FTP-STart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Remote-FTP-STart" href="#Remote-FTP-STart"></a>Remotely stop/start ftp on several systems</h3>
+
+<pre><code>C:\&gt;wmic /node:@ips.txt /user:u /password:p process call create "net <start> msftpsvc"
+</code></pre>
 <h3>
 <a id="List-Remote-Usersname-Connected" class="anchor" href="#List-Remote-Usersname-Connected" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-Remote-Usersname-Connected" href="#List-Remote-Usersname-Connected"></a>List the machines, with usernames, that were connected via RDP</h3>
 
