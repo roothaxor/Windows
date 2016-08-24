@@ -21,6 +21,9 @@
 <a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="user-content-table-of-contents" href="#table-of-contents"></a>Table of Contents</h2>
 
 <ul>
+<li><a href="#Print-RDP-Connects">Print RDP connects</a></li>
+<li><a href="#List-scheduled-tasks-binaries">List scheduled tasks & binaries</a></li>
+<li><a href="#Display-the-stored-username">Display the "Stored User names and Passwords" windows</a></li>
 <li><a href="#Disable-UAC">Disable UAC From Command Line</a></li>
 <li><a href="#get-entires-from-ipv4-neighbor-cache">Get entires from IPv4 neighbor cache</a></li>
 <li><a href="#get-available-wireless-networks-via-cmd-and-netsh">Get available wireless networks via cmd and netsh</a></li>
@@ -123,6 +126,21 @@
 </ul>
 
 <hr>
+<h3>
+<a id="Print-RDP-Connects" class="anchor" href="#Print-RDP-Connects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Print-RDP-Connects" href="#Print-RDP-Connects"></a>Print RDP connects</h3>
+
+<pre><code>C:\&gt;for /f "delims=" %i in ('reg query "HKCU\Software\Microsoft\Terminal Server Client\Servers"') do reg query "%i"
+</code></pre>
+<h3>
+<a id="List-scheduled-tasks-binaries" class="anchor" href="#List-scheduled-tasks-binaries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-scheduled-tasks-binaries" href="#List-scheduled-tasks-binaries"></a>List scheduled tasks & binaries</h3>
+
+<pre><code>C:\&gt;schtasks /query /fo LIST /v
+</code></pre>
+<h3>
+<a id="Display-the-stored-username" class="anchor" href="#Display-the-stored-username" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Display-the-stored-username" href="#Display-the-stored-username"></a>Display the "Stored User names and Passwords" windows</h3>
+
+<pre><code>C:\&gt;rundll32 keymgr.dll,KRShowKeyMgr
+</code></pre>
 
 <h3>
 <a id="Disable-UAC" class="anchor" href="#Disable-UAC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="user-content-get-entires-from-ipv4-neighbor-cache" href="#disable-UAC"></a>Disable UAC From Command Line</h3>
