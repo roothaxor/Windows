@@ -21,6 +21,9 @@
 <a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="user-content-table-of-contents" href="#table-of-contents"></a>Table of Contents</h2>
 
 <ul>
+<li><a href="#List-Services-Binaries">List ALL services AND their binaries</a></li>
+<li><a href="#Enable-Remote-Desktop-REG">Enable remote desktop using reg</a></li>
+<li><a href="#Enable-Boot-Logging">Enable the boot log to see list of drivers loaded during startup</a></li>
 <li><a href="#Set-Time-Zone">Set Time Zone of the system clock</a></li>
 <li><a href="#Lock-Command-Line">Lock Windows desktop using command line</a></li>
 <li><a href="#Force-Meterpreter-Binary-Remote">Force copy meterpreter binary to remote machines & run as system</a></li>
@@ -146,6 +149,22 @@
 </ul>
 
 <hr>
+<h3>
+<a id="List-Services-Binaries" class="anchor" href="#List-Services-Binaries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-Services-Binaries" href="#List-Services-Binaries"></a>List ALL services AND their binaries</h3>
+
+<pre><code>C:\&gt;for /F "tokens=2* delims= " %i in ('sc query ^| find /I "ce_name"') do @sc qc %i %j
+</code></pre>
+<h3>
+<a id="Enable-Remote-Desktop-REG" class="anchor" href="#Enable-Remote-Desktop-REG" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Enable-Remote-Desktop-REG" href="#Enable-Remote-Desktop-REG"></a>Enable remote desktop using reg</h3>
+
+<pre><code>C:\&gt;reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+</code></pre>
+<h3>
+<a id="Enable-Boot-Logging" class="anchor" href="#Enable-Boot-Logging" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Enable-Boot-Logging" href="#Enable-Boot-Logging"></a>Enable the boot log to see list of drivers loaded during startup</h3>
+
+<pre><code>C:\&gt;bcdedit /set bootlog yes
+<br>Read via %windir%\ntbtlog.txt
+</code></pre>
 <h3>
 <a id="Set-Time-Zone" class="anchor" href="#Set-Time-Zone" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Set-Time-Zone" href="#Set-Time-Zone"></a>Set Time Zone of the system clock</h3>
 
