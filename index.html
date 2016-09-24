@@ -23,6 +23,7 @@
 
 <ul>
 <li><a href="#List-Services-Binaries">List ALL services AND their binaries</a></li>
+<li><a href="#List-Connected-Wifi-Password-On-Win">List Connected Wifi Password in Text</a></li>
 <li><a href="#Enable-Remote-Desktop-REG">Enable remote desktop using reg</a></li>
 <li><a href="#Enable-Boot-Logging">Enable the boot log to see list of drivers loaded during startup</a></li>
 <li><a href="#Set-Time-Zone">Set Time Zone of the system clock</a></li>
@@ -154,6 +155,12 @@
 <a id="List-Services-Binaries" class="anchor" href="#List-Services-Binaries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-Services-Binaries" href="#List-Services-Binaries"></a>List ALL services AND their binaries</h3>
 
 <pre><code>C:\&gt;for /F "tokens=2* delims= " %i in ('sc query ^| find /I "ce_name"') do @sc qc %i %j
+</code></pre>
+<h3>
+<a id="List-Connected-Wifi-Password-On-Win" class="anchor" href="#List-Connected-Wifi-Password-On-Win" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-Services-Binaries" href="#List-Connected-Wifi-Password-On-Win"></a>List Connected Wifi Password in Text WINDOWS</h3>
+
+<pre><code>Run as Administrator : netsh wlan show profile
+<p>then use the connected wifi name like this example ( wifi_ex ) : netsh wlan show profile wifi_ex key=clear, Case Sensitive + if key content shows numbers use hexadecimal decode to get text form of password </p>
 </code></pre>
 <h3>
 <a id="Enable-Remote-Desktop-REG" class="anchor" href="#Enable-Remote-Desktop-REG" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="Enable-Remote-Desktop-REG" href="#Enable-Remote-Desktop-REG"></a>Enable remote desktop using reg</h3>
