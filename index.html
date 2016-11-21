@@ -158,12 +158,11 @@
 <pre><code>C:\&gt;for /F "tokens=2* delims= " %i in ('sc query ^| find /I "ce_name"') do @sc qc %i %j
 </code></pre>
 <h3>
-<a id="clear-all-events" class="anchor" href="#clear-all-events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-Services-Binaries" href="#List-Connected-Wifi-Password-On-Win"></a>List Connected Wifi Password in Text WINDOWS</h3>
-
+<a id="clear-all-events" class="anchor" href="#clear-all-events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="clear-all-events" href="#clear-all-events"></a>Clear All Windows Events Using PowerShell - Privacy</h3>
 <pre><code>Powershell Run as Administrator : wevtutil el | Foreach-Object {wevtutil cl "$_"}
 </code></pre>
+<h3>
 <a id="List-Connected-Wifi-Password-On-Win" class="anchor" href="#List-Connected-Wifi-Password-On-Win" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a id="List-Services-Binaries" href="#List-Connected-Wifi-Password-On-Win"></a>List Connected Wifi Password in Text WINDOWS</h3>
-
 <pre><code>Run as Administrator : netsh wlan show profile
 <p>then use the connected wifi name like this example ( wifi_ex ) : netsh wlan show profile wifi_ex key=clear <br> Case Sensitive + if key content shows numbers, use hexadecimal decode to get text form of password </p>
 </code></pre>
