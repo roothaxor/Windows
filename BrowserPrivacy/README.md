@@ -1,5 +1,6 @@
-On Firefox: 
-
+#Browser Privacy
+-------------------
+Mozila & Chrome: 
 To disable RTCPeerConnection and protect IP addresses leakage, go to 
 about:config ( type in url bar )
 and toggle 
@@ -18,29 +19,25 @@ For More Private Browsing Use VPN + DNS ( from VPN ), So that even Dns queries c
 for Example : http://google.com/search?q=Private%20Tunnel
 
 
-#########################################################################
-#######################   Virtual System   ############################## 
-#########################################################################
-
+#Virtual System
+-------------------
 For extreme privacy use Virtual Operating System ( You have to install a OperatingSystem in virtual box or any Virtual System )
 Flush/Delete System after use. Do it every time no traces will be left.
 
 
-##########################################################################
-######################   Chrome Browser   ################################
-##########################################################################
-
+#Chrome Browser
+-------------------
 Make safe yourself from online Fingerprinting : Just Search For This One. Fingerprinting may vary in types
 Some Chrome Plugins to avoid Fingerprinting Actually Blocking Fingerprinting Browser Dosen't Work Well So Canvas Defender Will Generate new Fingerprinting For spoofing works very well.
 
-Chrome install canvas defender plugin ( https://chrome.google.com/webstore/detail/canvas-defender/obdbgnebcljmgkoljcdddaopadkifnpm?hl=en )
+* [Chrome install Canvas Defender Plugin](https://chrome.google.com/webstore/detail/canvas-defender/obdbgnebcljmgkoljcdddaopadkifnpm?hl=en)
 
-&& privacy badger ( https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp )
+* [Privacy Badger Plugin](https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp)
 
 make sure all installed programs under your surviellance or can leak your info.
 
 at End Make Sure :
-Checking DNS leak Goto: https://www.dnsleaktest.com
+Checking DNS leak Goto: * [Dns Leak](https://www.dnsleaktest.com)
 Checking Other leaks Goto: http://roothaxor.in/Privacy/
 
 One more Tip: Make sure Your System Time is Set To the same time of IP of country you are using 
