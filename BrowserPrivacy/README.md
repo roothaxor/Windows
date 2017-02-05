@@ -36,9 +36,9 @@ Some Chrome Plugins to avoid Fingerprinting Actually Blocking Fingerprinting Bro
 
 make sure all installed programs under your surviellance or can leak your info.
 
-at End Make Sure :
-Checking DNS leak Goto: * [Dns Leak](https://www.dnsleaktest.com)
-Checking Other leaks Goto: http://roothaxor.in/Privacy/
+also Make Sure :
+Checking DNS leak Goto: [Dns Leak](https://www.dnsleaktest.com)
+Checking Other leaks Goto: [PrivacyCheck](http://roothaxor.in/Privacy/)
 
 One more Tip: Make sure Your System Time is Set To the same time of IP of country you are using 
 if you are using UK's IP and DNS Make your set time to UK's local Time.
