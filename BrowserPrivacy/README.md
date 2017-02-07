@@ -15,6 +15,10 @@ Sandboxing level in mozila "sandbox.content.level" to 2 ( Great ) or 3 ( Maximum
 
 Install Noscript Plugin Goto: https://noscript.net
 
+* [install self destructing cookies Plugin](https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/?src=collection&collection_id=4a02c848-8be7-44ff-bc1c-f1c2d8dddf86)
+OR
+* [Plugin Collection By Mozila For Privacy](https://addons.mozilla.org/en-US/firefox/collections/mozilla/privacy/)
+
 For More Private Browsing Use VPN + DNS ( from VPN ), So that even Dns queries can't be logged at Local ISP.
 for Example : http://google.com/search?q=Private%20Tunnel
 
