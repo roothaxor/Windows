@@ -2,7 +2,7 @@
 Huge list of Windows Commands, Make bitch life easy. Updated 22/11/2016.
 
 #Preview
-(https://raw.githubusercontent.com/roothaxor/Windows/gh-pages/Windows.png)
+![song go-rt](https://raw.githubusercontent.com/roothaxor/Windows/gh-pages/Windows.png)
 
 #Batch Files
 Collection of .bat Files for automation of some work mostly privacy concern.
