@@ -1,5 +1,5 @@
 #Collection of my batch files
-  A Collection Of some cool .bat files for automate somw work, Cause we human "Lazy by nature"
+  A Collection Of some cool .bat files for automate somw work, Cause we are humans "Lazy by nature"
 
 #Guide
 
@@ -14,6 +14,8 @@
     event_clear_win.bat - Wipe All Events Logs with single click
     
     mozila_wipe.bat - Wipe only Mozila Firefox Logs
+    
+    shutdown+time.bat - Shutdown your pc within X minutes.
     
     thumb_clean.bat - Wipe Thumb.db Logs from all drives of system. It is very usefull cause thumb cache contains huge information
     
