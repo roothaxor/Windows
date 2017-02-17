@@ -22,6 +22,12 @@ OR
 For More Private Browsing Use VPN + DNS ( from VPN ), So that even Dns queries can't be logged at Local ISP.
 for Example : http://google.com/search?q=Private%20Tunnel
 
+#User.js
+if 
+Put user.js in your firefox profile's folder (/home/user/.mozilla/firefox/xxxxxxx.default/) = False
+try: ( C:\Users\tom\AppData\Local\Mozilla\Firefox\xxxxxxx.default )
+This script removes all google, pocket and mozilla URL who can tracks you.
+
 
 #Virtual System
 -------------------
