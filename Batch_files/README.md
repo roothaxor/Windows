@@ -1,7 +1,7 @@
-#Collection of my batch files
-  A Collection Of some cool .bat files for automate somw work, Cause we are humans "Lazy by nature"
+# Collection of my batch files
+  A Collection Of cool .bat files for automate work, Cause we are humans "Lazy by nature"
 
-#Guide
+# Guide
 
     Ccleaner_auto.bat - Cleaner on startup. Copy in AppData\Roaming\Microsoft\Windows\StartMenu\Programs. works on 32/64bit, logs at %appdata%\CCleaner_history.txt
   
