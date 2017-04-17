@@ -1,4 +1,4 @@
-# transfer.sh - Windows Command line Secure file Up/Down Utility
+# transfer.sh - Windows Command line Secure file Up/Down
 
 The main script is based on python v2.7, copy transfer.py and transfer.cmd
 to `C:/Windows` or `C:/Windows/System32`
