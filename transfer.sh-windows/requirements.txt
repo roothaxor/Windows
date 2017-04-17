@@ -1,0 +1,3 @@
+clipboard==0.0.4
+requests==2.11.1
+progressbar2==3.18.1
