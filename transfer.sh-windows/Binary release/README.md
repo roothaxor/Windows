@@ -1,16 +1,9 @@
-# Binary release
+# Binary release for transfer.sh tool for NT-System
+- Binary release of this tool requires no python or pip installation
+- Just copy both files to `C:/windows/` or `C:/windows/system32/`
+- thats it, System now has `transfer` as `command` in Command Prompt.
 
-		No-need of installing the python or modules, Just copy both files
-		to `C:/Windows` or `C:/Windows/System32`
-		then a new command is added in your command prompt = `transfer`
-		Open command prompt and enter `transfer`.
-
-		Tips: Goto folder where file is located which you want to upload, 
-		Hold SHIFT KEY and Right Click there will be a option
-		`Open Command window here`, Select this and just follow program.
-
-
-# Screenshots
+# Screenshot
 
 <img src="https://preview.ibb.co/d9Ub0k/shot.png" width="600px"/>
 
