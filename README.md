@@ -1,6 +1,6 @@
 # Window Command List
 Huge list of Windows Commands, Make bitch life easy. Updated 22/11/2016.
-* [Windows Commands](https://www.roothaxor.github.io/windows/)
+* [Windows Commands](https://www.roothaxor.in/Windows/)
 
 # Batch Files
 Collection of .bat Files for automation of some work mostly privacy concern
